@@ -1,0 +1,6 @@
+org\ranger\mapper\UserMapper.class
+org\ranger\action\UserAction.class
+org\ranger\pojo\User.class
+org\ranger\service\UserService.class
+org\ranger\config\BeanConfig.class
+org\ranger\service\impl\UserServiceImpl.class

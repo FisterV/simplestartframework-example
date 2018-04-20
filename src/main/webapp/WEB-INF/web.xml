@@ -18,7 +18,7 @@
     <servlet-class>org.simplestartframwork.web.DispacherServlet</servlet-class>
     <init-param>
       <param-name>config</param-name>
-      <param-value>org.ranger.config.BeanConfig</param-value>
+      <param-value>org.ranger.example.config.BeanConfig</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>

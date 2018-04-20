@@ -1,11 +1,10 @@
-package org.ranger.config;
+package org.ranger.example.config;
 
 import javax.sql.DataSource;
 
 import org.simplestartframwork.context.annotation.Bean;
 import org.simplestartframwork.context.annotation.Config;
 import org.simplestartframwork.context.annotation.Scan;
-import org.simplestartframwork.data.Session;
 import org.simplestartframwork.data.SessionFactory;
 import org.simplestartframwork.data.datasource.DefaultDataSource;
 import org.simplestartframwork.data.impl.DefaultSessionFactory;

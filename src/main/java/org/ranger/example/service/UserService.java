@@ -1,4 +1,4 @@
-package org.ranger.service;
+package org.ranger.example.service;
 
 import java.util.Map;
 

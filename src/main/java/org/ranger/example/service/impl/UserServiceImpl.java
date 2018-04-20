@@ -1,9 +1,9 @@
-package org.ranger.service.impl;
+package org.ranger.example.service.impl;
 
 import java.util.Map;
 
-import org.ranger.mapper.UserMapper;
-import org.ranger.service.UserService;
+import org.ranger.example.mapper.UserMapper;
+import org.ranger.example.service.UserService;
 import org.simplestartframwork.context.annotation.Inject;
 import org.simplestartframwork.context.annotation.component.Service;
 

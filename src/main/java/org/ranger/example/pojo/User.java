@@ -1,4 +1,4 @@
-package org.ranger.pojo;
+package org.ranger.example.pojo;
 
 import java.util.Date;
 

@@ -45,5 +45,12 @@ public interface UserMapper {
 	 */
 	@SQL(type=SQLType.SELECT,value="SELECT user_id	FROM tb_user")
 	List<Map<String,Object>> findAll();
+	
+	/**
+	 * 查询指定Id的记录
+	 * @return
+	 */
+	@SQL(type=SQLType.SELECT,value="SELECT user_id	FROM tb_user WHERE user_id = #{id}")
+	Map<String,Object> findById(Long id);
 
 }

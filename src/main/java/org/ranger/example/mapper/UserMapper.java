@@ -19,7 +19,7 @@ public interface UserMapper {
 	 * @param entity
 	 * @return
 	 */
-	@SQL(type=SQLType.INSERT,value="INSERT INTO tb_user	(user_name, password) VALUES (#{username}, #{password})")
+	@SQL(type=SQLType.INSERT,value="INSERT INTO tb_user	(user_name, password,create_date) VALUES (#{user_name}, #{password},#{create_date})")
 	@Options(backfillParmaryKey=true,columnName="user_id",propteryName="user_id")
 	int insert(Map<String,Object> entity);
 	
@@ -43,7 +43,15 @@ public interface UserMapper {
 	 * 查询所有记录
 	 * @return
 	 */
-	@SQL(type=SQLType.SELECT,value="SELECT user_id	FROM tb_user")
+	@SQL(type=SQLType.SELECT,value="SELECT * FROM tb_user")
 	List<Map<String,Object>> findAll();
+	
+	/**
+	 * 通过ID查询对应的唯一记录
+	 * @param id
+	 * @return
+	 */
+	@SQL(type=SQLType.SELECT,value="SELECT * FROM tb_user WHERE user_id=#{id}")
+	Map<String,Object> findById(Long id);
 
 }

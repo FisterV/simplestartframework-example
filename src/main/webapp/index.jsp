@@ -8,6 +8,7 @@
 </head>
 <body>
   <a href="${pageContext.request.contextPath }/user/list.do">查询学生</a>
+
   
 </body>
 </html>

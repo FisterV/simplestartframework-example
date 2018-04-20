@@ -1,9 +1,6 @@
 package org.ranger.example.action;
 
-import java.util.List;
 import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,81 +25,52 @@ public class UserAction {
 	private UserService userService;
 
 	/**
-	 * 增加用户
+	 * 增加学生
 	 * @param entity
 	 * @return
 	 */
 	@PathMapping(value = "/add")
-	public String add(@RequestParam("entity") Map<String, Object> entity,HttpServletRequest request) {
-		LOGGER.debug("-增加用户-"+entity);
-		Map<String, Object> user = userService.add(entity);
-		System.out.println(user.get("user_id"));
-		
-		
-	    //插入后，返回用户列表
-		return this.list(request);
+	public String add(@RequestParam Map<String, Object> entity) {
+		LOGGER.debug("-增加学生-");
+
+	
+		return "redirect:/add.jsp";
 
 	}
 	
 	/**
-	 * 删除用户
+	 * 删除学生
 	 * @param entity
 	 * @return
 	 */
 	@PathMapping(value = "/delete")
-	public String delete(@RequestParam("id") Long id,HttpServletRequest request) {
-		LOGGER.debug("-删除用户-"+id);
-		
-		userService.deleteById(id);
+	public String delete(Long id) {
+		LOGGER.debug("-删除学生-");
 	
-		 //插入后，返回用户列表
-		return this.list(request);
+		return "redirect:/info.jsp";
 	}
 
 	
 	/**
-	 * 更新用户
+	 * 更新学生
 	 * @param entity
 	 * @return
 	 */
 	@PathMapping(value = "/update")
-	public String update(@RequestParam(value="entity") Map<String, Object> entity,HttpServletRequest request) {
-		LOGGER.debug("-更新用户-"+entity);
-		userService.updateOfNotNull(entity);
-		
+	public String update(@RequestParam Map<String, Object> entity) {
+		LOGGER.debug("-更新学生-");
 
-		 //更新后，返回用户列表
-		return this.list(request);
-	}
-	
-	/**
-	 *  跳转到更新用户页面
-	 * @param entity
-	 * @return
-	 */
-	@PathMapping(value = "/to_update")
-	public String toUpdate(@RequestParam("id") Long id,HttpServletRequest request) {
-		LOGGER.debug("-跳转更新用户页面-"+id);
-		
-		Map<String, Object> user = userService.findUserById(id);
-		request.setAttribute("user", user);
-		LOGGER.debug("返回的用户："+user);
-
-		return "forward:/update.jsp";
+		return "redirect:/info.jsp";
 	}
 
 	/**
-	 * 查询用户
+	 * 查询学生
 	 */
 	@PathMapping(value = "/list")
-	public String list(HttpServletRequest request) {
-		LOGGER.debug("-查询用户-");
-		List<Map<String, Object>> users = userService.findAll();
-		if(users!=null) {
-			request.setAttribute("users",users);
-		}
+	public String list() {
+		LOGGER.debug("-查询学生-");
 	
-		return "forward:/info.jsp";
+		return "redirect:/info.jsp";
 
 	}
 

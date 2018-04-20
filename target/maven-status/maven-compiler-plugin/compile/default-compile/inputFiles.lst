@@ -1,7 +1,6 @@
-D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\example\config\BeanConfig.java
-D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\example\mapper\UserMapper.java
-D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\example\mapper\builder\UserBuilder.java
-D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\example\service\UserService.java
-D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\example\service\impl\UserServiceImpl.java
-D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\example\action\UserAction.java
-D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\example\pojo\User.java
+D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\config\BeanConfig.java
+D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\mapper\UserMapper.java
+D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\pojo\User.java
+D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\action\UserAction.java
+D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\service\impl\UserServiceImpl.java
+D:\simple-start-workspace\simplestartframework-example\src\main\java\org\ranger\service\UserService.java
